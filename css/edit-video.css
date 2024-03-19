@@ -1,0 +1,325 @@
+body {
+  background-color: #f7f7f9;
+}
+
+body h3 {
+  font-weight: 100;
+}
+.hamburger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.box {
+  height: 100vh;
+  /* width: 90%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-left: 100px;
+  background-color: #f7f7f9;
+  /* z-index: 10000000000; */
+}
+#upload-container {
+  /* border: 1px solid #ccc;
+    border-radius: 8px; */
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  /* max-width: 500px; */
+}
+#upload-container button {
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 20px;
+  color: #333333;
+  width: auto;
+  padding: 0 10px;
+  text-align: center;
+  /* height: 4rem; */
+}
+
+#upload-container button:hover {
+  background-color: #333;
+  color: white;
+}
+
+#upload-btn:hover {
+  background-color: #333;
+  color: white;
+}
+.action-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-radius: 50%;
+  width: 60%;
+}
+
+#video-container {
+  margin: 20px;
+  display: none; /* Initially hide the video container */
+  max-width: 600px;
+  position: relative;
+}
+#video-frame {
+  border: 2px solid #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: auto;
+  pointer-events: none;
+}
+#slider-container {
+  margin-top: 20px;
+}
+#slider {
+  width: 100%;
+}
+#current-frame {
+  margin-top: 20px;
+}
+#frames-container {
+  margin-top: 20px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding: 5px 0; /* Add padding to prevent scrollbar from overlapping */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #aaa transparent; /* Firefox */
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 999;
+}
+#frames-container::-webkit-scrollbar {
+  /* WebKit */
+  width: 10px;
+}
+#frames-container::-webkit-scrollbar-thumb {
+  /* WebKit */
+  background-color: #aaa;
+  border-radius: 10px;
+}
+.frame {
+  display: inline-block;
+  margin-right: 0; /* Remove margin */
+  cursor: pointer; /* Add pointer cursor to indicate clickable */
+}
+#preview-container {
+  margin-top: 10px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 600px;
+  max-height: 300px;
+  overflow: hidden;
+}
+#preview-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: none; /* Remove border */
+}
+
+.volume-slider {
+  width: 200px;
+  height: 40px;
+  position: relative;
+}
+
+.volume-slider input[type="range"] {
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  background: linear-gradient(to right, #ccc 0%, #ccc 100%);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.volume-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.volume-icons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.volume-icons i {
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.upper-half {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 65%;
+  width: 100%;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.items button {
+  padding: 0;
+  width: 100%;
+  height: 3em;
+  font-size: x-large;
+  color: black;
+}
+
+.options button {
+  font-size: larger;
+  color: black;
+}
+
+.project-setting {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30%;
+  background-color: white;
+  /* height: 100%; */
+  /* margin-left: 120px; */
+  padding: 0px 20px;
+  /* border: 1px solid black; */
+  /* border-right: 1px solid lightgray; */
+}
+.size select {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  /* height: 50px; */
+  /* border: 1px solid black; */
+  border-radius: 0.7rem;
+}
+.project-setting ul {
+  /* height: 50px; */
+  border-radius: 10px;
+}
+.project-setting button {
+  /* height: 50px; */
+  border-radius: 0.7rem;
+}
+
+.size {
+  margin-bottom: 10px;
+}
+.background {
+  margin-bottom: 10px;
+}
+.background ul {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+.audio {
+  margin-bottom: 10px;
+}
+.audio button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border: none;
+  text-align: start;
+  height: 3rem;
+  width: 100%;
+  padding: 0 20px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.preview {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header span {
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
+.undo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+}
+.invites {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.invites button {
+  background-color: transparent;
+  border: 1px solid #eeeeee;
+  padding: 0;
+  border-radius: 1.2rem;
+  height: 3rem;
+  width: 40%;
+}
+#inv {
+  background-color: #191e2f;
+  color: white;
+}
+.img-preview {
+  display: flex;
+  justify-content: center;
+}
+
+.edit-options {
+  height: auto;
+  border: 1px solid lightgray;
+  width: 100%;
+}
+.git {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+}
+.file-inp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
