@@ -70,8 +70,3 @@ video.onloadedmetadata = function () {
     }
   });
 };
-
-function showPreview(imageUrl) {
-  previewContainer.innerHTML = `<img src="${imageUrl}" alt="Preview Image">`;
-  previewContainer.style.display = "block";
-}

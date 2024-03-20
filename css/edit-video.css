@@ -2,9 +2,6 @@ body {
   background-color: #f7f7f9;
 }
 
-body h3 {
-  font-weight: 100;
-}
 .hamburger {
   position: fixed;
   top: 0;
@@ -14,24 +11,18 @@ body h3 {
 
 .box {
   height: 100vh;
-  /* width: 90%; */
   display: flex;
   flex-direction: column;
   justify-content: start;
   margin-left: 100px;
   background-color: #f7f7f9;
-  /* z-index: 10000000000; */
 }
 #upload-container {
-  /* border: 1px solid #ccc;
-    border-radius: 8px; */
   padding: 10px;
   margin: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  /* max-width: 500px; */
 }
 #upload-container button {
   background-color: #eeeeee;
@@ -41,7 +32,6 @@ body h3 {
   width: auto;
   padding: 0 10px;
   text-align: center;
-  /* height: 4rem; */
 }
 
 #upload-container button:hover {
@@ -63,7 +53,7 @@ body h3 {
 
 #video-container {
   margin: 20px;
-  display: none; /* Initially hide the video container */
+  display: none;
   max-width: 600px;
   position: relative;
 }
@@ -89,9 +79,9 @@ body h3 {
   margin-top: 20px;
   overflow-x: scroll;
   white-space: nowrap;
-  padding: 5px 0; /* Add padding to prevent scrollbar from overlapping */
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: #aaa transparent; /* Firefox */
+  padding: 5px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #aaa transparent;
   position: fixed;
   bottom: 20px;
   left: 0;
@@ -100,18 +90,16 @@ body h3 {
   z-index: 999;
 }
 #frames-container::-webkit-scrollbar {
-  /* WebKit */
   width: 10px;
 }
 #frames-container::-webkit-scrollbar-thumb {
-  /* WebKit */
   background-color: #aaa;
   border-radius: 10px;
 }
 .frame {
   display: inline-block;
-  margin-right: 0; /* Remove margin */
-  cursor: pointer; /* Add pointer cursor to indicate clickable */
+  margin-right: 0;
+  cursor: pointer;
 }
 #preview-container {
   margin-top: 10px;
@@ -126,7 +114,7 @@ body h3 {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border: none; /* Remove border */
+  border: none;
 }
 
 .volume-slider {
@@ -209,24 +197,16 @@ body h3 {
   justify-content: space-around;
   width: 30%;
   background-color: white;
-  /* height: 100%; */
-  /* margin-left: 120px; */
   padding: 0px 20px;
-  /* border: 1px solid black; */
-  /* border-right: 1px solid lightgray; */
 }
 .size select {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-  /* height: 50px; */
-  /* border: 1px solid black; */
   border-radius: 0.7rem;
 }
 .project-setting ul {
-  /* height: 50px; */
   border-radius: 10px;
 }
 .project-setting button {
-  /* height: 50px; */
   border-radius: 0.7rem;
 }
 
@@ -270,6 +250,9 @@ body h3 {
 .header span {
   font-weight: 500;
 }
+.header h3 {
+  font-weight: 100;
+}
 
 .actions {
   display: flex;
@@ -293,12 +276,12 @@ body h3 {
   background-color: transparent;
   border: 1px solid #eeeeee;
   padding: 0;
-  border-radius: 1.2rem;
+  border-radius: 1rem;
   height: 3rem;
   width: 40%;
 }
 #inv {
-  background-color: #191e2f;
+  background-color: #0098fe;
   color: white;
 }
 .img-preview {
