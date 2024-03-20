@@ -15,7 +15,7 @@ const previewContainer = document.getElementById("preview-container");
 const videoSource = document.getElementById("video-source");
 
 uploadBtn.addEventListener("click", function () {
-  videoInput.click(); // Trigger file input click event
+  videoInput.click();
 });
 
 videoInput.addEventListener("change", function (event) {
@@ -24,7 +24,7 @@ videoInput.addEventListener("change", function (event) {
     const objectURL = URL.createObjectURL(file);
     videoSource.src = objectURL;
     video.load();
-    videoContainer.style.display = "block"; // Show the video container
+    videoContainer.style.display = "block";
   }
 });
 
@@ -40,12 +40,10 @@ video.addEventListener("timeupdate", function () {
   slider.value = value;
 });
 
-// Extract frames from the video and add them to the frames container
 video.onloadedmetadata = function () {
   const duration = video.duration;
-  const interval = duration / 100; // Divide the video into 100 intervals
+  const interval = duration / 100;
 
-  // Ensure video is ready
   video.addEventListener("loadeddata", function () {
     for (let i = 0; i < 100; i++) {
       const time = interval * i;
