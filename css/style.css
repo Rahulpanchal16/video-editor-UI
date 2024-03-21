@@ -57,7 +57,7 @@ body {
   padding: 0px 10px;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: normal;
+  white-space: nowrap;
 }
 .btns ul button {
   display: flex;
@@ -75,7 +75,7 @@ body {
   padding: 0px 10px;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: normal;
+  white-space: nowrap;
 }
 
 .btns ul li:hover {
@@ -148,9 +148,9 @@ body {
   background-color: #0098fe;
   border: none;
   width: 45%;
-  white-space: break word;
-  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .actions {
@@ -239,6 +239,9 @@ body {
   cursor: pointer;
   font-weight: 500;
   font-size: small;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .create-btn button i {
