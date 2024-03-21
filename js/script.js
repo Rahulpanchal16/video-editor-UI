@@ -68,7 +68,7 @@ video.onloadedmetadata = function () {
         frame.classList.add("frame");
         frame.innerHTML = `<img src="${dataUrl}" alt="Frame ${
           i + 1
-        }" width="100">`;
+        }" width="120">`;
 
         framesContainer.appendChild(frame);
 
