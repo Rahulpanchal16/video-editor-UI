@@ -121,8 +121,12 @@
               </div>
             </div>
           </div>
-          <div class="img-preview">
-            <img src="../images/placeholderImg.svg" alt="" />
+          <div class="img-preview" id="img-preview">
+            <img
+              src="../images/placeholderImg.svg"
+              alt=""
+              id="placeholderImg"
+            />
           </div>
         </div>
       </div>
@@ -135,7 +139,7 @@
               class="btn btn-link"
               data-bs-toggle="tooltip"
               data-bs-placement="top"
-              data-bs-title="Backward"
+              data-bs-title="Previous frame"
             >
               <i class="fa-solid fa-backward"></i>
             </button>
@@ -153,7 +157,7 @@
               class="btn btn-link"
               data-bs-toggle="tooltip"
               data-bs-placement="top"
-              data-bs-title="Forward"
+              data-bs-title="Next frame"
             >
               <i class="fa-solid fa-forward"></i>
             </button>
@@ -201,8 +205,17 @@
             <input id="slider" type="range" min="0" max="100" value="0" />
           </div>
         </div>
-
-        <div id="frames-container"></div>
+        <div id="ruler-container">
+          <div id="ruler"></div>
+        </div>
+        <div id="frames-container">
+          <div id="drag-line"></div>
+        </div>
+        <div id="loading-overlay">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
       </div>
       <div class="git">
         <small
@@ -295,6 +308,16 @@
             data-bs-title="Share"
           >
             <i class="fa-solid fa-share-nodes"></i>
+          </button>
+          <button
+            id="help"
+            type="button"
+            class="btn btn-link"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            data-bs-title="help"
+          >
+            <i class="fa-solid fa-question"></i>
           </button>
         </div>
       </div>
