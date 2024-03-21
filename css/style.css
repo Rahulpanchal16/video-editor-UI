@@ -55,6 +55,9 @@ body {
   font-size: medium;
   cursor: pointer;
   padding: 0px 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
 }
 .btns ul button {
   display: flex;
@@ -70,6 +73,9 @@ body {
   font-size: medium;
   cursor: pointer;
   padding: 0px 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
 }
 
 .btns ul li:hover {
@@ -115,7 +121,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 60px;
+  height: 70px;
   background-color: transparent;
   padding: 3px 5px;
 }
@@ -129,7 +135,7 @@ body {
   border-radius: 5px;
 }
 
-.nav-btn {
+.header-search .nav-btn {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -142,6 +148,9 @@ body {
   background-color: #0098fe;
   border: none;
   width: 45%;
+  white-space: break word;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .actions {
@@ -169,6 +178,7 @@ body {
 }
 .search input {
   width: 80%;
+  height: 2rem;
   border: none;
   border-radius: 15px;
   text-align: center;
