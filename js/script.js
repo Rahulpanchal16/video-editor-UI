@@ -4,6 +4,11 @@ function redirectToPage() {
 function redirectToHome() {
   window.location.href = `/index.html`;
 }
+
+function goto() {
+  window.location.href = `/html/edit-video.html`;
+}
+
 const uploadBtn = document.getElementById("upload-btn");
 const videoInput = document.getElementById("video-input");
 const videoContainer = document.getElementById("video-container");
