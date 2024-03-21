@@ -45,18 +45,17 @@ video.onloadedmetadata = function () {
   const interval = duration / 100;
   let framesAppended = 0;
 
-  // Show loading overlay
   const loadingOverlay = document.getElementById("loading-overlay");
   loadingOverlay.style.display = "block";
 
-  const startTime = performance.now(); // Record start time
+  const startTime = performance.now();
 
   video.onloadeddata = function () {
     for (let i = 0; i < 100; i++) {
       const time = interval * i;
       setTimeout(() => {
         video.currentTime = time;
-      }, 100 * i); // Adjust the delay as needed
+      }, 100 * i);
 
       video.addEventListener("seeked", function handleSeeked() {
         const canvas = document.createElement("canvas");
@@ -75,17 +74,15 @@ video.onloadedmetadata = function () {
 
         framesAppended++;
 
-        // Check if all frames are appended
         if (framesAppended === 100) {
-          const endTime = performance.now(); // Record end time
-          const totalTime = endTime - startTime; // Calculate total time
+          const endTime = performance.now();
+          const totalTime = endTime - startTime;
           console.log(
             "Total time taken:",
             totalTime.toFixed(2),
             "milliseconds"
           );
 
-          // Hide loading overlay
           loadingOverlay.style.display = "none";
         }
 
@@ -95,7 +92,6 @@ video.onloadedmetadata = function () {
         const srcValue = imgElement.src;
         imgElement.addEventListener("click", function (event) {
           placeholderImage.src = srcValue;
-          // imgPreview.style.display = "block";
         });
 
         let dragLine = document.querySelector(".drag-line");
@@ -113,67 +109,31 @@ video.onloadedmetadata = function () {
           framesContainer.appendChild(redDot);
         }
 
-        // Variables to track mouse state
         let isDragging = false;
         let startX = 0;
         let initialLeft = 0;
 
-        // Add mousedown event listener to start dragging
         dragLine.addEventListener("mousedown", function (event) {
           isDragging = true;
           startX = event.clientX;
           initialLeft = dragLine.getBoundingClientRect().left;
         });
 
-        // Add mousemove event listener to drag the line
         document.addEventListener("mousemove", function (event) {
           if (isDragging) {
             const offsetX = event.clientX - startX;
             const newLeft = initialLeft + offsetX;
-            dragLine.style.left = `${Math.max(0, newLeft)}px`; // Ensure line stays within the container
-            redDot.style.left = `${Math.max(0, newLeft)}px`; // Move the dot along with the line
+            dragLine.style.left = `${Math.max(0, newLeft)}px`;
+            redDot.style.left = `${Math.max(0, newLeft)}px`;
           }
         });
 
-        // Add mouseup event listener to stop dragging
         document.addEventListener("mouseup", function () {
           isDragging = false;
         });
 
-        // Append the drag line to the frames container
         framesContainer.appendChild(dragLine);
       });
     }
   };
 };
-
-/*
-video.onloadedmetadata = function () {
-  const duration = video.duration;
-  const interval = duration / 100;
-
-  video.addEventListener("loadeddata", function () {
-    for (let i = 0; i < 100; i++) {
-      const time = interval * i;
-      video.currentTime = time;
-      video.addEventListener("seeked", function () {
-        const canvas = document.createElement("canvas");
-        const context = canvas.getContext("2d");
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
-        const dataUrl = canvas.toDataURL("image/jpeg");
-        const frame = document.createElement("div");
-        frame.classList.add("frame");
-        frame.innerHTML = `<img src="${dataUrl}" alt="Frame ${
-          i + 1
-        }" width="100" height="">`;
-        frame.addEventListener("click", function () {
-          showPreview(dataUrl);
-        });
-        framesContainer.appendChild(frame);
-      });
-    }
-  });
-};
-*/

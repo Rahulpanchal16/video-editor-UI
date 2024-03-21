@@ -77,7 +77,7 @@ body {
 }
 #frames-container {
   justify-content: end;
-  /* margin-top: 20px; */
+
   overflow-x: scroll;
   white-space: nowrap;
   padding: 2px 0;
@@ -89,26 +89,25 @@ body {
   overflow: auto;
   position: relative;
 }
-
 .drag-line {
   position: absolute;
   top: 0;
-  left: 2px; /* Initially position the line at the center */
+  left: 2px;
   width: 2px;
   height: 80%;
   background-color: red;
-  cursor: ew-resize; /*Set cursor to horizontal resize*/
+  cursor: ew-resize;
 }
 .red-dot {
   position: absolute;
-  bottom: 80%; /* Position the dot below the line */
-  left: 5px; /* Align the dot with the line */
+  bottom: 80%;
+  left: 5px;
   width: 15px;
   height: 15px;
   background-color: red;
-  border-radius: 50%; /* Make it round */
+  border-radius: 50%;
   cursor: pointer;
-  transform: translate(-50%, -50%); /* Center the dot */
+  transform: translate(-50%, -50%);
 }
 
 #frames-container::-webkit-scrollbar {
@@ -124,21 +123,15 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.5
-  ); /* semi-transparent white background */
-  backdrop-filter: blur(5px); /* apply blur effect */
-  display: none; /* initially hidden */
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  display: none;
 }
 
 .spinner-border {
   position: absolute;
   top: 50%;
   left: 50%;
-  /* transform: translate(-50%, -50%); */
 }
 
 .frame {
@@ -334,11 +327,7 @@ body {
   height: 80%;
   display: flex;
   justify-content: center;
-  /* display: none; */
 }
-/* .img-preview img {
-  display: none;
-} */
 
 .edit-options {
   height: auto;
@@ -362,7 +351,7 @@ body {
   left: 0;
   width: 100%;
   justify-content: center;
-  height: 40px; /* Adjust height as needed */
+  height: 40px;
   background-color: #f0f0f0;
   overflow-x: auto;
 }
@@ -380,7 +369,7 @@ body {
   color: #000;
   white-space: nowrap;
   position: relative;
-  padding-left: 50px; /* Adjust padding to match video controls */
+  padding-left: 50px;
 }
 
 #ruler::before {
@@ -390,7 +379,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  border-top: 2px solid white; /* Adjust color and thickness */
+  border-top: 2px solid white;
   z-index: 1;
 }
 

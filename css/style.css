@@ -320,27 +320,27 @@ body {
 /* Media queries for smartphones */
 @media only screen and (max-width: 480px) {
   .sidebar {
-    display: none; /* Hide sidebar on smartphones */
+    display: none;
   }
 
   .main-content {
-    width: 100%; /* Take full width on smartphones */
+    width: 100%;
   }
 
   .header-search {
-    justify-content: flex-end; /* Adjust alignment of search bar */
+    justify-content: flex-end;
   }
 
   .search input {
-    width: 60%; /* Adjust width of search input */
+    width: 60%;
   }
 
   .create-btn button {
-    font-size: 0; /* Hide text on buttons */
+    font-size: 0;
   }
 
   .create-btn button i {
-    font-size: medium; /* Show only icons on buttons */
+    font-size: medium;
   }
   .rec-vids {
     padding: 0;
